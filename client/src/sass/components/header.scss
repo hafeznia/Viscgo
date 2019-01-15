@@ -1,0 +1,27 @@
+@import '../main.scss';
+
+.header {
+    background: $primaryColor;
+    color: $whiteColor;
+    font-weight: bold;
+    &_date {
+        font-size: .8rem;
+        padding: .5rem 0;
+    }
+    &_info {
+        line-height: 1.3rem;
+        font-size: 13px;
+        &-icon {
+            padding: 0 .5rem 0 1rem;
+        }
+    }
+    &_dropdownToggle {
+        padding: 0 !important;
+        color: $whiteColor !important;
+        &:after {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+    }
+}
