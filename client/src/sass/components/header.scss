@@ -4,6 +4,9 @@
     background: $primaryColor;
     color: $whiteColor;
     font-weight: bold;
+    &_container {
+        padding: 0 80px 0 45px;
+    }
     &_date {
         font-size: .8rem;
         padding: .5rem 0;
@@ -22,6 +25,28 @@
             position: absolute;
             top: 5px;
             right: 10px;
+        }
+    }
+    &_dropdownMenu {
+        padding: 0 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin-top: 10px !important;
+        a {
+            display: block;
+            padding:10px;
+            &:not(:last-child) {
+                border-bottom: 1px solid #EFEFEF;
+                color: #868686;
+                font-size: 12px;
+            }
+            &.header_dropdownMenu-logout {
+                color: #0799D4;
+                font-size: 13px;
+                svg {
+                    margin-left: 5px;
+                }
+            }
         }
     }
 }

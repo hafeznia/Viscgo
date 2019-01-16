@@ -1,9 +1,9 @@
 import React from 'react';
+
 import "../../sass/components/header.scss";
+import logo from '../../Images/logo_splash.png';
 import {Icon, LogOutIcon} from "../Icons/Icon";
 import {ICONS} from "../Icons/ICONS";
-import logo from '../../Images/logo_splash.png';
-
 import {
     Container,
     Collapse,
@@ -14,21 +14,26 @@ import {
     NavItem,
     UncontrolledDropdown,
     DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    DropdownMenu } from 'reactstrap';
  
 class Header extends React.Component {
     state = {
         date: "",
         isOpen: false    
     };
-    constructor(props) {
-        super(props);
-        this.toggle = this.toggle.bind(this);
-      }
     componentDidMount() {
         this.renderDate();
     }
+    constructor(props) {
+        super(props);
+        this.toggle = this.toggle.bind(this);
+    }
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
+    // Show date
     renderDate = () => {
         const date = new Date();
         const month = date.toLocaleString('en-us', { month: 'long' });
@@ -38,16 +43,11 @@ class Header extends React.Component {
           date: `${ month + ' ' + day + ', ' + year }`
         });
     }
-      toggle() {
-        this.setState({
-          isOpen: !this.state.isOpen
-        });
-      }
 
     render() {
         return (
             <header className="header">
-                <Container>
+                <div className="header_container">
                     <Navbar expand="md">
                         <NavbarBrand href="/">
                             <img src={logo} alt={"logo"} />
@@ -63,7 +63,6 @@ class Header extends React.Component {
                                         <Icon path={ICONS.USER} width="35" height="35" color="#FFF" />
                                     </div>
                                 </NavItem>
-
                                 <UncontrolledDropdown nav inNavbar>
                                     <DropdownToggle nav caret className="header_dropdownToggle">
                                         <div className="header_info">
@@ -72,21 +71,20 @@ class Header extends React.Component {
                                             <span className="header_info-name">Mike Smith</span>
                                         </div>
                                     </DropdownToggle>
-                                    <DropdownMenu left>
-                                        <DropdownItem>
+                                    <DropdownMenu left className="header_dropdownMenu">
+                                        <a href="#">
                                             Edit Profile
-                                        </DropdownItem>
-                                        <DropdownItem>
+                                        </a>
+                                        <a href="#" className="header_dropdownMenu-logout">
                                             Logout
-                                            <LogOutIcon color="red" />
-                                        </DropdownItem>
-                                        <DropdownItem divider />
+                                            <LogOutIcon color="#0799D4" />
+                                        </a>
                                     </DropdownMenu>
                                 </UncontrolledDropdown>
                             </Nav>
                         </Collapse>
                     </Navbar>
-                </Container>
+                </div>
             </header>
         )
     }
