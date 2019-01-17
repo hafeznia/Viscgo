@@ -1,13 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Col } from 'reactstrap';
+import '../../sass/components/aside.scss';
 import {DashboardIcon, 
         OrganisationIcon,
         StaffIcon,
         PatientIcon,
-        SettingIcon
-
-    } from "../Icons/Icon";
-import '../../sass/components/aside.scss';
+        SettingIcon } from "../Icons/Icon";
 
 class Menu extends React.Component {
     render() {
@@ -16,38 +15,34 @@ class Menu extends React.Component {
                 <div className="sidebar_content">
                     <ul className="nav">
                         <li className="nav-item">
-                            <a href="#">
+                            <Link to="/">
                                 <DashboardIcon color="#FFF" />
                                 Dashboard
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            
-                            <a href="#">
+                            <Link to="/Organisations">
                                 <OrganisationIcon color="#FFF" />
                                 Organisation
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            
-                            <a href="#">
+                            <Link to="/Staff">
                                 <StaffIcon color="#FFF" />
                                 staff
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            
-                            <a href="#">
+                            <Link to="/Patients">
                                 <PatientIcon color="#FFF" />
                                 Patients
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            
-                            <a href="#">
+                            <Link to="/Settings">
                                 <SettingIcon color="#FFF" />
                                 Settings
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
