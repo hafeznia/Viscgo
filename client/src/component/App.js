@@ -18,9 +18,9 @@ const App = () => {
                     <Header />
                     <div className="main">
                         <Menu />
-                        <Col xs="10">
+                        <Col xs="10" className="content">
                             <Switch>
-                                <Route path="/" exact component={Dashboard}></Route>
+                                <Route path="/Dashboard" exact component={Dashboard}></Route>
                                 <Route path="/Organisations" exact component={Organisations}></Route>
                                 <Route path="/Staff" exact component={Staff}></Route>
                                 <Route path="/Patients" exact component={Patients}></Route>

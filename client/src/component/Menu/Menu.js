@@ -15,7 +15,7 @@ class Menu extends React.Component {
                 <div className="sidebar_content">
                     <ul className="nav">
                         <li className="nav-item">
-                            <Link to="/">
+                            <Link to="/Dashboard">
                                 <DashboardIcon color="#FFF" />
                                 Dashboard
                             </Link>

@@ -1,15 +1,13 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import "../../sass/components/header.scss";
 import logo from '../../Images/logo_splash.png';
 import {Icon, LogOutIcon} from "../Icons/Icon";
 import {ICONS} from "../Icons/ICONS";
 import {
-    Container,
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     UncontrolledDropdown,
@@ -43,15 +41,14 @@ class Header extends React.Component {
           date: `${ month + ' ' + day + ', ' + year }`
         });
     }
-
     render() {
         return (
             <header className="header">
                 <div className="header_container">
                     <Navbar expand="md">
-                        <NavbarBrand href="/">
+                        <Link to="/" className="navbar-brand">
                             <img src={logo} alt={"logo"} />
-                        </NavbarBrand>
+                        </Link>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>

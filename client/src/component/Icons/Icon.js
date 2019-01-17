@@ -12,7 +12,6 @@ class Icon extends React.Component {
     );
   }
 }
-
 class LogOutIcon extends React.Component {
   render() {
     const fill = {
@@ -92,6 +91,20 @@ class SettingIcon extends React.Component {
     );
   }
 }
+class HomeIcon extends React.Component {
+  render() {
+    const fill = {
+      fill: `${this.props.color}`
+    }
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" width="16.592" height="16.62" viewBox="0 0 16.592 16.62">
+          <path style={fill} d="M14,16H11V10H6v6H3V7H2V17H15V7H14ZM7,16V11h3v5Zm9.8-9.527L16.2,7.28,8.5,1.62.8,7.278.2,6.472,8.5.38l8.3,6.093Z" transform="translate(-0.204 -0.38)" />
+      </svg>
+    );
+  }
+}
+
+
 
 export {
   LogOutIcon,
@@ -100,5 +113,6 @@ export {
   OrganisationIcon,
   StaffIcon,
   PatientIcon,
-  SettingIcon
+  SettingIcon,
+  HomeIcon
 }

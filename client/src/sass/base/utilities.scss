@@ -21,3 +21,36 @@ body {
         max-width: 100%;
     }
 }
+.content {
+    padding: 23px;
+    &_title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $primaryColor;
+    }
+}
+.breadcrumb {
+    padding: 15px 0 !important;
+    background-color: transparent !important;
+    li {
+        padding: 0 !important;
+        color: $textColor;
+        font-weight: bold;
+        font-size: 14px;
+        &:not(:first-child):before{
+            content: '' !important;
+            width: 4px;
+            height: 4px;
+            background: $textColor;
+            border-radius: 50%;
+            margin: 5px 6px 4px 5px;
+            padding: 0;
+        }
+        a{
+            color: $textColor;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+    }
+}
