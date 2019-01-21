@@ -1,0 +1,23 @@
+@import '../main.scss';
+
+.Dashboard {
+    &_card {
+        padding: 35px 0;
+        font-weight: bold;
+        background: #FFF;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.42);
+        &-number {
+            color: $primaryColor;
+            font-size: 30px;
+            border-bottom: 3px solid;
+            margin: 0 40px 15px;
+            display: block;
+            padding: 10px 0;
+        }
+        &-title {
+            color: $textColor;
+            
+        }
+    }
+}
