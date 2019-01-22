@@ -9,14 +9,14 @@ const Dashboard = () => {
         return <Card number={cur.number} title={cur.title} />
     });
     return (
-        <div>
+        <>
             <Title title="Dashboard" />
             <Breadcrumb />
             
             <div className="row">
                 {renderCard}
             </div>
-        </div>
+        </>
     )
 }
 export default Dashboard;
