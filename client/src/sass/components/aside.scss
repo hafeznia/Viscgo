@@ -2,16 +2,18 @@
 
 .sidebar {
     background: $secondaryColor;
-    max-width: 250px !important;
-    position: static;
+    width: 230px !important;
+    position: fixed;
     z-index: 99;
     padding: 0 !important;
+    height: 100%;
+    top: 0;
     &_content {
         position: static;
         overflow: visible;
         width: auto;
         left: 0;
-        padding-top: 70px;
+        padding-top: 140px;
         .nav {
             display: block;
             .nav-item{

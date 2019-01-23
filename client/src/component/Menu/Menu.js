@@ -13,8 +13,9 @@ class Menu extends React.Component {
         // var isActive = this.context.router.route.location.pathname === this.props.to;
         // var className = isActive ? 'active' : '';
         return (
-            <Col xs="2" className="sidebar">
-                <div className="sidebar_content">
+            <Col xs="2" style={{ padding: 0 }}>
+                <div className="sidebar">
+                    <div className="sidebar_content">
                     <ul className="nav">
                         <li className="nav-item">
                             <NavLink to="/Dashboard" exact={true}>
@@ -47,6 +48,7 @@ class Menu extends React.Component {
                             </NavLink>
                         </li>
                     </ul>
+                </div>
                 </div>
             </Col>
         );

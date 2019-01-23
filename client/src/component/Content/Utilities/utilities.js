@@ -7,7 +7,7 @@ import '../../../sass/components/table.scss';
 
 const { SearchBar } = Search;
 const options = {
-    paginationSize: 5,
+    paginationSize: 3,
     pageStartIndex: 1,
     prePageText: 'Previous',
     nextPageText: 'Next',
@@ -15,7 +15,7 @@ const options = {
     paginationTotalRenderer: false,
     hideSizePerPage: true,
     sizePerPageList: [{
-        text: '5', value: 5
+        text: '5', value: 3
     }, {
         text: '10', value: 10
     }, {
