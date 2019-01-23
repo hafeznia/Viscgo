@@ -1,4 +1,4 @@
-@import '../main.scss';
+@import '../abstracts/variable.scss';
 
 .sidebar {
     background: $secondaryColor;
@@ -16,14 +16,26 @@
             display: block;
             .nav-item{
                 display: block;
-                
                 transition: all .3s;
+                position: relative;
                 a{
                     color: $whiteColor;
                     padding: 11px 20px;
                     display: block;
                     svg {
                         margin-right: 20px;
+                    }
+                    &.active {
+                        background: rgba(0, 0, 0, 0.23);
+                        &:before{
+                            content: '›';
+                            font-size: 45px;
+                            position: absolute;
+                            right: 10px;
+                            top: -13px;
+                            color: $secondaryColor;
+                            z-index: 15555;
+                        }
                     }
                     &:hover {
                         background: rgba(0, 0, 0, 0.23);

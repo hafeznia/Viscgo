@@ -6,6 +6,7 @@ import { HomeIcon } from '../Icons/Icon';
 const routes = {
   '/': `Dashboard`,
   '/Organisations': 'Organisations',
+  '/Organisation/': 'Organisations',
   '/Settings': 'Settings',
   '/Staff': 'Staff'
 //   '/settings/a/b': 'B',

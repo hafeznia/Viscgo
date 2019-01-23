@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Col } from 'reactstrap';
 import '../../sass/components/aside.scss';
 import {DashboardIcon, 
@@ -10,39 +10,41 @@ import {DashboardIcon,
 
 class Menu extends React.Component {
     render() {
+        // var isActive = this.context.router.route.location.pathname === this.props.to;
+        // var className = isActive ? 'active' : '';
         return (
             <Col xs="2" className="sidebar">
                 <div className="sidebar_content">
                     <ul className="nav">
                         <li className="nav-item">
-                            <Link to="/Dashboard">
+                            <NavLink to="/Dashboard" exact={true}>
                                 <DashboardIcon color="#FFF" />
                                 Dashboard
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Organisations">
+                            <NavLink to="/Organisations" activeClassName="active">
                                 <OrganisationIcon color="#FFF" />
                                 Organisation
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Staff">
+                            <NavLink to="/Staff" activeClassName="active">
                                 <StaffIcon color="#FFF" />
                                 staff
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Patients">
+                            <NavLink to="/Patient" activeClassName="active">
                                 <PatientIcon color="#FFF" />
                                 Patients
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Settings">
+                            <NavLink to="/Settings" activeClassName="active">
                                 <SettingIcon color="#FFF" />
                                 Settings
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

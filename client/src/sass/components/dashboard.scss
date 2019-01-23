@@ -7,6 +7,50 @@
         background: #FFF;
         border-radius: 5px;
         box-shadow: 0 0 10px 0 rgba(204, 204, 204, 0.42);
+        transition: all .2s;
+        &:hover {
+            box-shadow: 0 0 10px 0 rgba(204, 204, 204, 1);
+        }
+        &-org {
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            &--img {
+                border-radius: 5px;
+                width: 100%;
+            }
+            &--name {
+                span {
+                    font-size: 14px;
+                    display: block;
+                }
+                &-h {
+                    color: $textColorCard;
+                    margin-bottom: 20px;
+                }
+                &-n {
+                    color: $primaryColor;
+                }
+            }
+            &--info {
+                padding: 0;
+                margin-top: 40px;
+                li {
+                    list-style-type: none;
+                    color:#5D5D5D;
+                    font-size: 13px;
+                    line-height: 30px;
+                    span {
+                        width: 50%;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        &-link {
+            &:hover {
+                text-decoration: none;
+            }
+        }
         &-number {
             color: $primaryColor;
             font-size: 30px;
